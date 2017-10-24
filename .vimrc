@@ -45,13 +45,13 @@ let g:airline_powerline_fonts = 1
 
 set autoread
 
-set macligatures
+" set macligatures
 
 set guifont=Fira\ Code:h12
 
 map <C-k> :NERDTreeToggle<CR>
 
-" Ale configuration 
+" Ale configuration
 let g:ale_fixers = {
 \   'javascript': ['standard'],
 \}
