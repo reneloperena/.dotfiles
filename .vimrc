@@ -1,44 +1,34 @@
-set nocompatible
-filetype plugin on
+filetype plugin indent on
 
 set path+=**
 set wildmenu
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin('~/.config/nvim/plugged')
 
 "FS explorer
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 
 " Status/Tabline
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'altercation/vim-colors-solarized'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'altercation/vim-colors-solarized'
+
 " Fuzzy file finder
-Plugin 'kien/ctrlp.vim'
+Plug 'kien/ctrlp.vim'
 
 " Git
-Plugin 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 
-Plugin 'scrooloose/syntastic'
-
-" Plugin 'airblade/vim-gitgutter'
+" Syntax Highlighting
+Plug 'w0rp/ale'
 
 " Easy tmux navigation
-Plugin 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-navigator'
 
-" autocomplete
-Plugin 'Valloric/YouCompleteMe'
-" Elixir
-Plugin 'slashmili/alchemist.vim'
-filetype plugin indent on    " required
+" Unit Testing
+Plug 'janko-m/vim-test'
 
-call vundle#end()
-
-let g:ycm_server_keep_logfiles = 1
-let g:ycm_server_log_level = 'debug'
+call plug#end()
 
 syntax enable
 set background=dark
@@ -60,3 +50,10 @@ set macligatures
 set guifont=Fira\ Code:h12
 
 map <C-k> :NERDTreeToggle<CR>
+
+" Ale configuration 
+let g:ale_fixers = {
+\   'javascript': ['standard'],
+\}
+
+let g:ale_fix_on_save = 1
