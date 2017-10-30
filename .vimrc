@@ -28,6 +28,9 @@ Plug 'christoomey/vim-tmux-navigator'
 " Unit Testing
 Plug 'janko-m/vim-test'
 
+" Org-mode
+Plug 'jceb/vim-orgmode'
+
 call plug#end()
 
 syntax enable
