@@ -33,10 +33,11 @@ call plug#end()
 syntax enable
 set background=dark
 
-set expandtab
-set shiftwidth=2
-set softtabstop=2
+set smartindent
 set tabstop=2
+set shiftwidth=2
+set expandtab
+set softtabstop=2
 
 set backspace=indent,eol,start
 
