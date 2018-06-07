@@ -28,6 +28,10 @@ Plug 'christoomey/vim-tmux-navigator'
 " Unit Testing
 Plug 'janko-m/vim-test'
 
+" Scala
+Plug 'derekwyatt/vim-scala'
+Plug 'ensime/ensime-vim'
+
 " Org-mode
 Plug 'jceb/vim-orgmode'
 
@@ -48,6 +52,8 @@ set laststatus=2
 let g:airline_powerline_fonts = 1
 
 set autoread
+
+autocmd BufWritePost *.scala silent :EnTypeCheck
 
 " set macligatures
 
