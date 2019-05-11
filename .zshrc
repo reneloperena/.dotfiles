@@ -21,6 +21,8 @@ export PATH="$PATH:/usr/local/go/bin"
 autoload -Uz compinit && compinit -i
 fpath=(~/.zsh/completion $fpath)
 
+
+export PATH="$PATH:/Library/TeX/texbin"
 alias vim="nvim"
 alias vi="nvim"
 alias oldvim="vim"
@@ -37,7 +39,19 @@ fi
 [[ -f /Users/rene/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/rene/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/rene/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/rene/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/rene/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/rene/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/rene/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/rene/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/rene/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/rene/google-cloud-sdk/completion.zsh.inc'; fi
+
+# tabtab source for yarn package
+# uninstall by removing these lines or running `tabtab uninstall yarn`
+[[ -f /Users/rene/.config/yarn/global/node_modules/tabtab/.completions/yarn.zsh ]] && . /Users/rene/.config/yarn/global/node_modules/tabtab/.completions/yarn.zsh
+
+
+export GOOGLE_APPLICATION_CREDENTIALS="/Users/rene/vuhio-f78536c47306.json"
+source /usr/local/opt/nvm/nvm.sh
+
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /Users/rene/.nvm/versions/node/v10.15.2/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/rene/.nvm/versions/node/v10.15.2/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh

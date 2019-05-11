@@ -35,6 +35,8 @@ Plug 'ensime/ensime-vim'
 " Org-mode
 Plug 'jceb/vim-orgmode'
 
+" Unified diff
+Plug 'lambdalisue/vim-unified-diff'
 call plug#end()
 
 syntax enable
@@ -62,6 +64,9 @@ set guifont=Fira\ Code:h12
 map <C-k> :NERDTreeToggle<CR>
 
 " Ale configuration
+let g:ale_linters = {
+\   'javascript': ['standard'],
+\}
 let g:ale_fixers = {
 \   'javascript': ['standard'],
 \}
