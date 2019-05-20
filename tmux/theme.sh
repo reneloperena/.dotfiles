@@ -51,7 +51,7 @@ set-window-option -g clock-mode-colour $tm_color_active
 # tm_tunes="#[fg=$tm_color_music]#(osascript ~/.dotfiles/applescripts/tunes.scpt | cut -c 1-50)"
 tm_custom="#[fg=$tm_custom_color]#(osascript -l JavaScript ~/tmux/custom.js)"
 tm_tunes="#[fg=$tm_color_music]#(osascript -l JavaScript ~/tmux/tunes.js)"
-tm_battery="#(~/scripts/battery_indicator.sh)"
+tm_battery="#(~/tmux/battery_indicator.sh)"
 
 tm_date="#[fg=$tm_color_inactive] %R %d %b"
 tm_host="#[fg=$tm_color_feature,bold]#h"

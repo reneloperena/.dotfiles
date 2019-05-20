@@ -2,6 +2,7 @@ filetype plugin indent on
 
 set path+=**
 set wildmenu
+set number
 
 call plug#begin('~/.config/nvim/plugged')
 
@@ -17,7 +18,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'kien/ctrlp.vim'
 
 " Git
-Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-fugitive'
 
 " Syntax Highlighting
 Plug 'w0rp/ale'
@@ -64,11 +65,16 @@ set guifont=Fira\ Code:h12
 map <C-k> :NERDTreeToggle<CR>
 
 " Ale configuration
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '⚠'
+highlight ALEErrorSign ctermbg=NONE ctermfg=red
+highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
+
 let g:ale_linters = {
-\   'javascript': ['standard'],
+\   'javascript': ['eslint'],
 \}
 let g:ale_fixers = {
-\   'javascript': ['standard'],
+\   'javascript': ['eslint'],
 \}
 
 let g:ale_fix_on_save = 1

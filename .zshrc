@@ -3,7 +3,7 @@ export ZSH=~/.oh-my-zsh
 export EDITOR=nvim
 
 ZSH_THEME="agnoster"
-plugins=(git node yarn docker-compose)
+plugins=(git node yarn docker-compose npm docker)
 
 # User configuration
 
@@ -55,3 +55,8 @@ source /usr/local/opt/nvm/nvm.sh
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [[ -f /Users/rene/.nvm/versions/node/v10.15.2/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/rene/.nvm/versions/node/v10.15.2/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
+
+alias g3="git log --graph --decorate --oneline"
+
+export DATABASE_USERNAME=postgres
+export NODE_ENV=development
