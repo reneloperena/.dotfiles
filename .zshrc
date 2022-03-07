@@ -38,18 +38,14 @@ fi
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /Users/rene/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/rene/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/rene/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/rene/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/rene/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/rene/google-cloud-sdk/completion.zsh.inc'; fi
-
 # tabtab source for yarn package
 # uninstall by removing these lines or running `tabtab uninstall yarn`
 [[ -f /Users/rene/.config/yarn/global/node_modules/tabtab/.completions/yarn.zsh ]] && . /Users/rene/.config/yarn/global/node_modules/tabtab/.completions/yarn.zsh
 
 
-export GOOGLE_APPLICATION_CREDENTIALS="/Users/rene/vuhio-f78536c47306.json"
+# export GOOGLE_APPLICATION_CREDENTIALS="/Users/reneloperena/keychain/grupo-ruga-a0bcf9a792a1.json"
+export GOOGLE_APPLICATION_CREDENTIALS="/Users/reneloperena/keychain/rlkey.json"
+# export GOOGLE_APPLICATION_CREDENTIALS="/Users/reneloperena/keychain/uhomesadecv-88e151ef0246.json"
 source /usr/local/opt/nvm/nvm.sh
 
 # tabtab source for slss package
@@ -60,3 +56,23 @@ alias g3="git log --graph --decorate --oneline"
 
 export DATABASE_USERNAME=postgres
 export NODE_ENV=development
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/reneloperena/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/reneloperena/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/reneloperena/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/reneloperena/google-cloud-sdk/completion.zsh.inc'; fi
+
+export NPM_TOKEN=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
+
+alias k=kubectl
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
+
+# Stuff for trato-hecho
+export DATABASE_PASSWORD=GfJeAMQsCnjPk9
+export TWILIO_ACCOUNT_SID=AC40dc5bbf979f66167bf1a31c369f187d
+export TWILIO_AUTH_TOKEN=2e5898e0518f9408f3cc8f5996a3b450
+export TWILIO_VERIFY_SERVICE_SID=VA86917d1914a3c45c6e2c4b4499a2f300
+export PATH=/Users/reneloperena/.meteor:$PATH
+ export PATH=$PATH:/Users/reneloperena/flutter/bin
+

@@ -71,10 +71,10 @@ highlight ALEErrorSign ctermbg=NONE ctermfg=red
 highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
 
 let g:ale_linters = {
-\   'javascript': ['eslint'],
+\   'javascript': ['standard'],
 \}
 let g:ale_fixers = {
-\   'javascript': ['eslint'],
+\   'javascript': ['standard'],
 \}
 
 let g:ale_fix_on_save = 1
